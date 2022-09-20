@@ -4,7 +4,7 @@ import { sequelize } from './sequelize';
 import { IndexRouter } from './controllers/v0/index.router';
 
 import bodyParser from 'body-parser';
-
+import {Router, Request, Response} from 'express'; 
 import { V0MODELS } from './controllers/v0/model.index';
 
 (async () => {
@@ -24,6 +24,10 @@ import { V0MODELS } from './controllers/v0/model.index';
   });
 
   app.use('/api/v0/', IndexRouter)
+
+
+
+
 
   // Root URI call
   app.get( "/", async ( req, res ) => {
